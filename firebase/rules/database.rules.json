@@ -1,0 +1,30 @@
+{
+  "rules": {
+    "users": {
+      "$uid": {
+        ".read": "auth !== null",
+        ".write": "auth !== null && auth.uid === $uid"
+      }
+    },
+    "squads": {
+      "$squadId": {
+        ".read": "auth !== null",
+        ".write": "auth !== null"
+      }
+    },
+    "status": {
+      "$squadId": {
+        ".read": "auth !== null",
+        "$uid": {
+          ".write": "auth !== null && auth.uid === $uid"
+        }
+      }
+    },
+    "nudges": {
+      "$uid": {
+        ".read": "auth !== null && auth.uid === $uid",
+        ".write": "auth !== null"
+      }
+    }
+  }
+}

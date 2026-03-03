@@ -1,0 +1,141 @@
+/* Popup window styles */
+/* OWNER: Triya */
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  width: 360px;
+  min-height: 480px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: #0f0f1a;
+  color: #e0e0e0;
+}
+
+.popup-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.popup-header {
+  background: linear-gradient(135deg, #6C5CE7 0%, #a29bfe 100%);
+  padding: 20px;
+  text-align: center;
+}
+
+.popup-title {
+  font-size: 28px;
+  font-weight: 900;
+  color: white;
+  letter-spacing: -1px;
+}
+
+.popup-subtitle {
+  font-size: 12px;
+  color: rgba(255,255,255,0.8);
+  margin-top: 2px;
+}
+
+.popup-tabs {
+  display: flex;
+  border-bottom: 1px solid #2a2a3e;
+}
+
+.tab {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  background: transparent;
+  color: #888;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.tab.active {
+  color: #6C5CE7;
+  border-bottom: 2px solid #6C5CE7;
+}
+
+.popup-content {
+  flex: 1;
+  padding: 16px;
+  overflow-y: auto;
+}
+
+/* Group Manager */
+.group-manager { display: flex; flex-direction: column; gap: 12px; }
+.group-actions { display: flex; gap: 8px; }
+
+.btn-primary {
+  flex: 1;
+  padding: 10px 16px;
+  background: #6C5CE7;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.btn-primary:hover { background: #5a4bd1; }
+
+.btn-secondary {
+  flex: 1;
+  padding: 10px 16px;
+  background: transparent;
+  color: #6C5CE7;
+  border: 1px solid #6C5CE7;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-back {
+  align-self: flex-start;
+  background: none;
+  border: none;
+  color: #6C5CE7;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px 12px;
+  background: #1a1a2e;
+  border: 1px solid #2a2a3e;
+  border-radius: 8px;
+  color: #e0e0e0;
+  font-size: 14px;
+}
+.input-field:focus {
+  outline: none;
+  border-color: #6C5CE7;
+}
+
+/* Nudge Panel */
+.nudge-panel { display: flex; flex-direction: column; gap: 12px; }
+.nudge-options { display: flex; flex-wrap: wrap; gap: 6px; }
+
+.nudge-button {
+  padding: 8px 12px;
+  background: #1a1a2e;
+  border: 1px solid #2a2a3e;
+  border-radius: 20px;
+  color: #e0e0e0;
+  cursor: pointer;
+  font-size: 12px;
+  transition: all 0.2s;
+}
+.nudge-button:hover {
+  background: #6C5CE7;
+  border-color: #6C5CE7;
+}
+
+.nudge { padding: 8px; border-radius: 8px; font-size: 13px; }
+.nudge.unread { background: rgba(108, 92, 231, 0.1); border-left: 3px solid #6C5CE7; }
+.nudge.read { opacity: 0.6; }
+
+h3 { font-size: 14px; font-weight: 700; color: #e0e0e0; }
