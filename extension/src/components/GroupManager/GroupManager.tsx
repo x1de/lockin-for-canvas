@@ -1,6 +1,6 @@
 // GroupManager - create/join squads
 // OWNER: Triya
-import React, { useState } from "react";
+import { useState } from "react";
 
 export default function GroupManager() {
   const [mode, setMode] = useState<"menu" | "create" | "join">("menu");

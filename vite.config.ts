@@ -6,6 +6,7 @@ import path from "path";
 
 export default defineConfig({
   plugins: [react(), crx({ manifest })],
+  publicDir: "extension/public",
   resolve: { alias: { "@": path.resolve(__dirname, "./extension/src") } },
   build: { outDir: "dist" },
 });

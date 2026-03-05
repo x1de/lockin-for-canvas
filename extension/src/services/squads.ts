@@ -1,7 +1,7 @@
 // Squad CRUD + invite code logic
 // OWNER: Rishi
 import { db } from "./firebase";
-import { ref, push, set, get, onValue, off, query, orderByChild, equalTo } from "firebase/database";
+import { ref, push, set, onValue, off } from "firebase/database";
 import type { Squad } from "../types";
 
 function generateInviteCode(): string {
@@ -22,7 +22,7 @@ export async function createSquad(name: string, creatorUid: string): Promise<Squ
   return squad;
 }
 
-export async function joinSquad(inviteCode: string, uid: string): Promise<Squad | null> {
+export async function joinSquad(_inviteCode: string, _uid: string): Promise<Squad | null> {
   // TODO: query squads by invite code, add uid to memberIds
   // This is a placeholder - implement with Firebase query
   return null;

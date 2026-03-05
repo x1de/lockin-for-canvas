@@ -1,7 +1,7 @@
 // NudgePanel - send and receive nudges
 // OWNER: Triya
-import React, { useState, useEffect } from "react";
-import type { Nudge, NudgeMessage, NUDGE_LABELS } from "../../types";
+import { useState } from "react";
+import type { Nudge, NudgeMessage } from "../../types";
 
 const NUDGE_OPTIONS: { key: NudgeMessage; label: string }[] = [
   { key: "lets_lock_in", label: "Let's lock in!" },
@@ -12,7 +12,7 @@ const NUDGE_OPTIONS: { key: NudgeMessage; label: string }[] = [
 ];
 
 export default function NudgePanel() {
-  const [receivedNudges, setReceivedNudges] = useState<Nudge[]>([]);
+  const [receivedNudges, _setReceivedNudges] = useState<Nudge[]>([]);
 
   // TODO: Hook up to subscribeToMyNudges
 

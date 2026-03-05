@@ -6,21 +6,18 @@
   "permissions": ["activeTab", "storage", "notifications", "alarms"],
   "host_permissions": ["https://*.instructure.com/*"],
   "background": {
-    "service_worker": "src/background/index.ts",
+    "service_worker": "extension/src/background/index.ts",
     "type": "module"
   },
   "content_scripts": [{
     "matches": ["https://*.instructure.com/*"],
-    "js": ["src/content/index.tsx"],
-    "css": ["src/styles/content.css"],
+    "js": ["extension/src/content/index.tsx"],
     "run_at": "document_idle"
   }],
   "action": {
-    "default_popup": "src/popup/index.html",
+    "default_popup": "extension/src/popup/index.html",
     "default_icon": {
-      "16": "icons/icon-16.png",
-      "48": "icons/icon-48.png",
-      "128": "icons/icon-128.png"
+      "48": "icons/icon-48.png"
     }
   }
 }

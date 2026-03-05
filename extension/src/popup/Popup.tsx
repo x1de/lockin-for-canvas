@@ -1,6 +1,6 @@
 // Extension popup - squad management hub
 // OWNER: Triya
-import React, { useState, useEffect } from "react";
+import { useState } from "react";
 import { createRoot } from "react-dom/client";
 import GroupManager from "../components/GroupManager/GroupManager";
 import NudgePanel from "../components/NudgePanel/NudgePanel";

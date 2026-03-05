@@ -16,7 +16,7 @@ import { initAuth, getCurrentUser } from "../services/auth";
 import { writeStatus, listenToSquadStatuses } from "../services/statusSync";
 import { sendNudge, subscribeToMyNudges } from "../services/nudges";
 import { createSquad, joinSquad } from "../services/squads";
-import type { RequestMessage, BroadcastMessage, MemberStatus, Nudge } from "../types";
+import type { RequestMessage, BroadcastMessage, Nudge } from "../types";
 import { NUDGE_LABELS } from "../types";
 
 // Track active squad subscriptions so we don't duplicate listeners

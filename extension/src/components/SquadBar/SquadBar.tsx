@@ -1,11 +1,11 @@
 // SquadBar - injected into Canvas sidebar, shows squad status
 // OWNER: Triya
-import React, { useState, useEffect } from "react";
+import { useState } from "react";
 import StatusBadge from "../StatusBadge/StatusBadge";
 import type { MemberStatus } from "../../types";
 
 export default function SquadBar() {
-  const [members, setMembers] = useState<MemberStatus[]>([]);
+  const [members, _setMembers] = useState<MemberStatus[]>([]);
   const [expanded, setExpanded] = useState(true);
 
   // TODO: Hook up to subscribeToSquadStatuses via useSquadStatuses hook

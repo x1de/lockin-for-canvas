@@ -11,10 +11,8 @@ export function scrapeCurrentUser(): { userId: string; displayName: string } | n
   // Canvas stores user info in ENV variable on the page
   // Look for window.ENV or specific DOM elements
   try {
-    const envScript = document.querySelector('script:not([src])');
-    // TODO: Parse ENV.current_user_id and ENV.current_user.display_name
-    // Fallback: scrape from profile link in nav
-    const profileLink = document.querySelector('.ic-app-header__menu-list-item--active a');
+    // TODO: Parse ENV.current_user_id and ENV.current_user.display_name from script:not([src])
+    // Fallback: scrape from profile link in nav (.ic-app-header__menu-list-item--active a)
     // Placeholder - implement actual scraping
     return null;
   } catch {

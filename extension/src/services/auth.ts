@@ -10,7 +10,7 @@
 
 import { auth, db } from "./firebase";
 import { signInAnonymously, onAuthStateChanged, User as FirebaseUser } from "firebase/auth";
-import { ref, set, get } from "firebase/database";
+import { ref, set } from "firebase/database";
 import type { User } from "../types";
 
 let currentUser: User | null = null;

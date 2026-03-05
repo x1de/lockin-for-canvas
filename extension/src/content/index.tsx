@@ -6,7 +6,7 @@
 // 2. Detect assignment status changes
 // 3. Inject the SquadBar UI component into the Canvas sidebar
 
-import React from "react";
+import "../styles/content.css";
 import { createRoot } from "react-dom/client";
 import { scrapeCurrentUser, detectCurrentAssignmentStatus } from "../services/canvasParser";
 import SquadBar from "../components/SquadBar/SquadBar";

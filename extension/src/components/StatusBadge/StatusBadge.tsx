@@ -1,6 +1,5 @@
 // StatusBadge - visual indicator of assignment progress
 // OWNER: Triya
-import React from "react";
 import type { AssignmentStatus } from "../../types";
 
 const STATUS_CONFIG: Record<AssignmentStatus, { label: string; color: string; emoji: string }> = {
